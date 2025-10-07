@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Montheri Trading | Mining Excellence</title>
     <style>
+        
         * {
             margin: 0;
             padding: 0;
@@ -428,10 +429,45 @@
             border-top: 1px solid var(--glass-border);
         }
 
+        /* Mobile Menu Toggle */
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        .mobile-menu-toggle span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background: white;
+            margin: 5px 0;
+            transition: 0.3s;
+        }
+
         /* Responsive */
+        @media (max-width: 1200px) {
+            nav {
+                padding: 0 1.5rem;
+            }
+
+            main {
+                padding: 120px 1.5rem 4rem;
+            }
+
+            .glass-container {
+                padding: 2rem;
+            }
+        }
+
         @media (max-width: 968px) {
             .grid-2, .grid-3, .grid-4, .contact-grid {
                 grid-template-columns: 1fr;
+                gap: 1.5rem;
             }
 
             nav ul {
@@ -445,6 +481,324 @@
 
             .section-title {
                 font-size: 2rem;
+            }
+
+            .glass-container {
+                padding: 1.5rem;
+                margin: 1.5rem 0;
+            }
+
+            .quote-box {
+                font-size: 1.1rem;
+                padding: 1.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            /* Mobile Navigation */
+            .mobile-menu-toggle {
+                display: block;
+            }
+
+            nav ul {
+                position: fixed;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: rgba(10, 14, 39, 0.95);
+                backdrop-filter: blur(20px);
+                flex-direction: column;
+                padding: 2rem;
+                gap: 1rem;
+                transform: translateY(-100vh);
+                transition: transform 0.3s ease;
+                border-top: 1px solid var(--glass-border);
+                z-index: 999;
+            }
+
+            nav ul.active {
+                transform: translateY(0);
+            }
+
+            nav ul li {
+                text-align: center;
+            }
+
+            nav a {
+                display: block;
+                padding: 1rem;
+                font-size: 1.1rem;
+            }
+
+            .logo {
+                font-size: 1.2rem;
+            }
+
+            main {
+                padding: 100px 1rem 2rem;
+            }
+
+            .hero {
+                padding: 2rem 0;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+                line-height: 1.2;
+                margin-bottom: 1rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .cta-button {
+                padding: 0.8rem 2rem;
+                font-size: 1rem;
+            }
+
+            .glass-container {
+                padding: 1.5rem;
+                margin: 1rem 0;
+                border-radius: 15px;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .section-subtitle {
+                font-size: 1.4rem;
+                margin: 1.5rem 0 1rem;
+            }
+
+            .glass-card {
+                padding: 1.5rem;
+                border-radius: 12px;
+            }
+
+            .glass-card h3 {
+                font-size: 1.3rem;
+                margin-bottom: 0.8rem;
+            }
+
+            .stat-box {
+                padding: 1.5rem;
+            }
+
+            .stat-box .number {
+                font-size: 2.5rem;
+            }
+
+            .stat-box .label {
+                font-size: 1rem;
+            }
+
+            .service-icon {
+                width: 60px;
+                height: 60px;
+                font-size: 1.5rem;
+            }
+
+            .quote-box {
+                font-size: 1rem;
+                padding: 1.2rem;
+                margin: 1.5rem 0;
+            }
+
+            .contact-grid {
+                gap: 2rem;
+            }
+
+            .contact-info h3 {
+                margin: 1.5rem 0 0.8rem;
+            }
+
+            footer {
+                padding: 1.5rem 1rem;
+                margin-top: 2rem;
+            }
+
+            footer p {
+                margin-bottom: 0.8rem;
+                font-size: 0.9rem;
+            }
+
+            footer a {
+                margin: 0 0.5rem !important;
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo {
+                font-size: 1rem;
+                letter-spacing: 1px;
+            }
+
+            main {
+                padding: 90px 0.8rem 2rem;
+            }
+
+            .hero h1 {
+                font-size: 1.6rem;
+                line-height: 1.3;
+            }
+
+            .hero p {
+                font-size: 1rem;
+                padding: 0 1rem;
+            }
+
+            .cta-button {
+                padding: 0.7rem 1.5rem;
+                font-size: 0.9rem;
+            }
+
+            .glass-container {
+                padding: 1rem;
+                margin: 0.8rem 0;
+                border-radius: 12px;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+                margin-bottom: 1rem;
+            }
+
+            .section-subtitle {
+                font-size: 1.2rem;
+                margin: 1rem 0 0.8rem;
+            }
+
+            .glass-card {
+                padding: 1rem;
+                border-radius: 10px;
+            }
+
+            .glass-card h3 {
+                font-size: 1.1rem;
+                margin-bottom: 0.6rem;
+            }
+
+            .stat-box {
+                padding: 1rem;
+            }
+
+            .stat-box .number {
+                font-size: 2rem;
+            }
+
+            .stat-box .label {
+                font-size: 0.9rem;
+            }
+
+            .service-icon {
+                width: 50px;
+                height: 50px;
+                font-size: 1.2rem;
+            }
+
+            .quote-box {
+                font-size: 0.95rem;
+                padding: 1rem;
+                margin: 1rem 0;
+            }
+
+            .contact-form input,
+            .contact-form textarea {
+                padding: 0.8rem;
+                font-size: 0.9rem;
+            }
+
+            .contact-form button {
+                padding: 0.8rem 1.5rem;
+                font-size: 0.9rem;
+            }
+
+            footer {
+                padding: 1rem 0.8rem;
+            }
+
+            footer p {
+                font-size: 0.8rem;
+                line-height: 1.4;
+            }
+
+            footer a {
+                margin: 0 0.3rem !important;
+                font-size: 0.8rem;
+                display: inline-block;
+                padding: 0.2rem 0;
+            }
+
+            /* Adjust background animation for mobile */
+            .bg-animation::before,
+            .bg-animation::after {
+                width: 300px;
+                height: 300px;
+                filter: blur(80px);
+            }
+
+            /* Lists */
+            ul.styled-list li {
+                padding: 0.4rem 0;
+                padding-left: 1.5rem;
+                font-size: 0.9rem;
+            }
+
+            ul.styled-list li::before {
+                font-size: 1rem;
+            }
+
+            /* Project cards */
+            .project-tag {
+                font-size: 0.8rem;
+                padding: 0.3rem 0.8rem;
+            }
+
+            /* Team cards */
+            .team-card h3 {
+                font-size: 1.1rem;
+            }
+
+            .team-card .credentials {
+                font-size: 0.85rem;
+            }
+        }
+
+        @media (max-width: 360px) {
+            /* Very small screens */
+            .hero h1 {
+                font-size: 1.4rem;
+            }
+
+            .hero p {
+                font-size: 0.9rem;
+            }
+
+            .section-title {
+                font-size: 1.3rem;
+            }
+
+            .glass-container {
+                padding: 0.8rem;
+            }
+
+            .glass-card {
+                padding: 0.8rem;
+            }
+
+            .stat-box .number {
+                font-size: 1.8rem;
+            }
+
+            footer a {
+                display: block;
+                margin: 0.2rem 0 !important;
+                text-align: center;
             }
         }
 
@@ -465,7 +819,9 @@
         strong {
             color: white;
         }
+
     </style>
+    
 </head>
 <body>
     <div class="bg-animation"></div>
@@ -473,7 +829,12 @@
     <header>
         <nav>
             <div class="logo">MONTHERI <span>TRADING</span></div>
-            <ul>
+            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul id="mobile-menu">
                 <li><a href="#" data-page="home" class="nav-link active">Home</a></li>
                 <li><a href="#" data-page="about" class="nav-link">About</a></li>
                 <li><a href="#" data-page="services" class="nav-link">Services</a></li>
@@ -1215,6 +1576,7 @@
     <footer>
         <p>&copy; 2025 Montheri Trading (Pty) Ltd. All rights reserved.</p>
         <p>Company Registration: 2015/443653/07 | 100% Black Owned | Level 1 BBBEE</p>
+        <p>Website designed and hosted by Webtank Solutions Est. 2021</p>
         <p style="margin-top: 1rem;">
             <a href="#" data-page="home" style="color: white; margin: 0 1rem;">Home</a> |
             <a href="#" data-page="about" style="color: white; margin: 0 1rem;">About</a> |
@@ -1225,11 +1587,12 @@
 
     <script>
         // Page navigation
-        const navLinks = document.querySelectorAll('.nav-link, [data-page]');
-        const pages = document.querySelectorAll('.page-content');
+        // Page navigation
+const navLinks = document.querySelectorAll('.nav-link, [data-page]');
+const pages = document.querySelectorAll('.page-content'); // ADD THIS LINE
 
-        function showPage(pageName) {
-            pages.forEach(page => page.classList.remove('active'));
+function showPage(pageName) {
+    pages.forEach(page => page.classList.remove('active')); // Now this will work
             document.getElementById(pageName).classList.add('active');
             
             navLinks.forEach(link => link.classList.remove('active'));
@@ -1254,6 +1617,59 @@
 
         // Initialize first page
         showPage('home');
+
+        // Mobile Menu Toggle Functionality
+function toggleMobileMenu() {
+    const menu = document.getElementById('mobile-menu');
+    const toggle = document.querySelector('.mobile-menu-toggle');
+    
+    menu.classList.toggle('active');
+    
+    // Animate hamburger icon
+    const spans = toggle.querySelectorAll('span');
+    if (menu.classList.contains('active')) {
+        spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+        spans[1].style.opacity = '0';
+        spans[2].style.transform = 'rotate(-45deg) translate(7px, -6px)';
+    } else {
+        spans[0].style.transform = 'none';
+        spans[1].style.opacity = '1';
+        spans[2].style.transform = 'none';
+    }
+}
+
+// Close mobile menu when clicking on menu items
+document.addEventListener('DOMContentLoaded', function() {
+    const menuLinks = document.querySelectorAll('#mobile-menu a');
+    const menu = document.getElementById('mobile-menu');
+    const toggle = document.querySelector('.mobile-menu-toggle');
+    
+    menuLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            menu.classList.remove('active');
+            
+            // Reset hamburger icon
+            const spans = toggle.querySelectorAll('span');
+            spans[0].style.transform = 'none';
+            spans[1].style.opacity = '1';
+            spans[2].style.transform = 'none';
+        });
+    });
+    
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('nav') && menu.classList.contains('active')) {
+            menu.classList.remove('active');
+            
+            // Reset hamburger icon
+            const spans = toggle.querySelectorAll('span');
+            spans[0].style.transform = 'none';
+            spans[1].style.opacity = '1';
+            spans[2].style.transform = 'none';
+        }
+    });
+});
+
     </script>
 </body>
 </html>
